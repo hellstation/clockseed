@@ -1,0 +1,19 @@
+[project]
+name = "clockseed"
+version = "0.1.0"
+description = "Recover AES-encrypted files when the key came from srand(time(NULL)) and rand()."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "hellstation" }]
+dependencies = ["pycryptodome>=3.20"]
+
+[project.scripts]
+clockseed = "clockseed.cli:console_main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
