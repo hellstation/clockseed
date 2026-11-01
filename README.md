@@ -1,5 +1,10 @@
 # clockseed
 
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Cryptography](https://img.shields.io/badge/Cryptography-AES--128%2F192%2F256-orange)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+[![Platform](https://img.shields.io/badge/Platform-Cross--platform-lightgrey)](#)
+
 Recover AES-encrypted files when the key came from `srand(time(NULL))` and `rand()`.
 
 A locker that does this has already given the key away. `time(NULL)` is a count of seconds, so the key is one of a few hundred values around the moment the sample started, not one of 2^256. clockseed tries that window and writes the plaintext back.
